@@ -1,0 +1,40 @@
+page-inscription {
+  ion-grid {
+    height: 100%;
+    justify-content: center;
+  }
+  ion-navbar {
+    background-color: darkred;
+  }
+  .textColor {
+    color: #f3e9c8;
+  }
+  .my-view-inscri {
+    background: url('../assets/img/302300.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: auto;
+    backface-visibility: visible;
+  }
+  .fixed-content {
+    margin-top: 44px;
+    opacity: 0.2;
+    background: white;
+  }
+  .mLogin {
+    font-size: small;
+  }
+  ion-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 90px 1px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+  }
+  ion-list {
+    background-color: transparent;
+  }
+}
+

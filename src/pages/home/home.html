@@ -1,14 +1,73 @@
+<!--
+  Generated template for the HomePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
+  <ion-toolbar position color="yellowAK">
+    <ion-title> CoolDeary </ion-title>
+    <ion-buttons start>
+      <button ion-button (click)="dismiss()">
+        <span ion-text color="ligth" showWhen="ios">
+          <ion-icon ios="ios-arrow-back" md="md-arrow-back"></ion-icon>
+        </span>
+        <ion-icon name="md-close" showWhen="android, windows"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+
+
+<ion-content center>
+
+  <div id="map" ></div>
+<!-- [ngClass]="androidDevise ? 'card-md-map' : 'card-ios-map'" -->
+  <ion-card>
+
+
+    <ion-item>
+
+      <ion-icon name="pin" item-left large></ion-icon>
+      <h2>Museum of Football</h2>
+      <p>11 N. Way St, Madison, WI 53703</p>
+    </ion-item>
+    <ion-list>
+      <ion-item color="textAK">
+        Number of dishes
+        <button ion-button outline item-right icon-left clear>
+
+      4 Meal's
+    </button>
+      </ion-item>
+
+      <ion-item color="ligth">
+        Buy with credit card
+        <button ion-button outline item-right icon-left>
+      <ion-icon name="cash" ></ion-icon>
+      BUY
+    </button>
+      </ion-item>
+
+      <ion-item color="textAK">
+        Buy on delivery
+        <button ion-button outline item-right icon-left>
+      <ion-icon name="call"></ion-icon>
+      CALL
+    </button>
+      </ion-item>
+
+      <ion-item color="ligth">
+        Cook chef profile
+        <button ion-button outline item-right icon-left>
+      <ion-icon name="person"></ion-icon>
+      PROFILE
+    </button>
+      </ion-item>
+
+    </ion-list>
+  </ion-card>
+
+
 </ion-content>

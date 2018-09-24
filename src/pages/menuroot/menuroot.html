@@ -1,0 +1,33 @@
+<ion-menu [content]="content" type="overlay" side="left">
+  <ion-header>
+    <ion-toolbar color="yellowAK">
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-list>
+      <div *ngFor="let p of pages,let i = index">
+        <ion-item style="font-size: 2rem; color:#f1ad0c;" (tap)="openPage(p, i)" *ngIf="p.selected == false">
+          <ion-icon ios="{{p.ios}}" md="{{p.android}}"></ion-icon>
+          {{p.title}}
+        </ion-item>
+        <ion-item  style="font-size: 2rem; color:#248ca7;" (tap)="openPage(p, i)" *ngIf="p.selected == true">
+          <ion-icon ios="{{p.ios}}" md="{{p.android}}"></ion-icon>
+          {{p.title}}
+        </ion-item>
+        <!-- <button ion-button  icon-left full clear  color="yellowAK"  style="font-size: 1.6rem;" (tap)="openPage(p, i)" *ngIf="p.selected == false" >
+          <ion-icon ios="{{p.ios}}" md="{{p.android}}"></ion-icon>
+          {{p.title}}
+        </button>
+        <button ion-button icon-left full clear color="blueAK" style="font-size: 1.6rem;" (tap)="openPage(p, i)"
+          *ngIf="p.selected == true">
+          <ion-icon ios="{{p.ios}}" md="{{p.android}}"></ion-icon>
+          {{p.title}}
+        </button> -->
+      </div>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

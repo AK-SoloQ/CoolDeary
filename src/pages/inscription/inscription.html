@@ -1,0 +1,34 @@
+<!--
+  Generated template for the InscriptionPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar position color="yellowAK">
+    <ion-title class="textColor"> CoolDeary </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding center text-center class="my-view-inscri">
+
+  <ion-grid class="grid-inscription">
+    <ion-row>
+      <ion-col col-xs-12>
+        <h4>
+          You're ready to deal meal!
+        </h4>
+        <p>Find out what's happening near you.</p>
+        <p>And Share what do you do.</p>
+
+        <button ion-button color="primary" round full icon-left (click)="facebookLogin($event)"><ion-icon name="logo-facebook"></ion-icon> Sign up with Facebook </button>
+        <button ion-button color="redAK" round full icon-left (click)="googleplusLogin($event)"><ion-icon name="logo-googleplus"></ion-icon> Sign up with Google </button>
+        <!-- <button ion-button color="light" round full icon-left (tap)="simpleLogin($event)"><ion-icon name="ios-mail-outline"></ion-icon> Sign up with E-mail </button>
+        <p class="mLogin"> Already have an account? <a (tap)="Logining($event)"> Login </a> </p> -->
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

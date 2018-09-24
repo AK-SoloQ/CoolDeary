@@ -1,0 +1,89 @@
+<!--
+  Generated template for the ListPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-header>
+  <ion-navbar position color="yellowAK">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title> Today's Deary </ion-title>
+  </ion-navbar>
+  <ion-fab bottom right edge>
+    <button ion-fab color="vibrant" color="blueAK" (click)="addMeal($event)">
+      <ion-icon ios="ios-camera" md="md-camera" style="zoom:1.3;"></ion-icon>
+    </button>
+  </ion-fab>
+</ion-header>
+
+
+
+
+<!-- <ion-header>
+
+  <ion-navbar color="yellowAK">
+    <button ion-button icon-only ion-left (click)="presentPopover($event)">
+  <ion-icon name="more"></ion-icon>
+</button>
+    <ion-title>
+      CoolDeary
+    </ion-title>
+
+  </ion-navbar>
+
+
+
+</ion-header> -->
+
+<ion-content center class="my-view-inscri">
+  <div style="margin-top:20px"></div>
+  <ion-grid  style="max-width: 998px;">
+    <ion-row justify-content-center>
+      <ion-col col-xs-12 col-sm-12 col-12 col-md-6 *ngFor="let item of tables, let i = index" align-self-center >
+        <ion-card class="adv-map" style="">
+          <div style="position: relative">
+            <img src="{{item.mealImages}}" imageViewer class="img">
+            <ion-fab right top>
+              <button ion-fab class="fab-map" color="yellowAK" (tap)="showMeal($event, i)">
+                <ion-icon name='pin' style="zoom:1.3;"></ion-icon>
+              </button>
+            </ion-fab>
+          </div>
+          <ion-card-content>
+            <ion-card-title>
+              {{item.name}}
+            </ion-card-title>
+            <p>
+              {{item.description}}
+            </p>
+          </ion-card-content>
+
+          <ion-item actions>
+            <span ion-text item-start color="blueAK" class="item-bold" item-left>Ariana, Tunisie</span>
+            <span ion-text item-start color="subtle" item-right> 3 Km</span>
+            <!-- <button ion-button color="primary" clear item-end icon-left>
+              <ion-icon name='navigate'></ion-icon>
+              Start
+            </button> -->
+            <ion-buttons end>
+              <button ion-button icon-only (click)="presentActionSheet($event)" clear color="blueAK">
+                <ion-icon name="more"></ion-icon>
+              </button>
+            </ion-buttons>
+          </ion-item>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+
+<ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+  <ion-infinite-scroll-content></ion-infinite-scroll-content>
+</ion-infinite-scroll>
+
+
+
+</ion-content>

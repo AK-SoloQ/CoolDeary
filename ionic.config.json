@@ -1,5 +1,8 @@
 {
   "name": "CoolDeary",
-  "app_id": "",
-  "type": "ionic-angular"
+  "app_id": "8de345d9",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
 }

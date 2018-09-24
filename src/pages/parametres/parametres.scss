@@ -1,0 +1,34 @@
+page-parametres {
+ion-navbar {
+  background-color: darkred;
+}
+
+.textColor {
+  color: #f3e9c8;
+}
+
+.my-view-inscri {
+  background: url('../assets/img/302300.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin: auto;
+  backface-visibility: visible;
+}
+
+.img {
+  margin: auto;
+  height: 160px;
+  opacity: 1;
+}
+
+ion-title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0 90px 1px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+}
